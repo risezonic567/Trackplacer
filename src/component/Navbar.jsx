@@ -64,7 +64,7 @@ function Navbar() {
 
           <div className="w-40 h-12 rounded-lg flex items-center justify-center overflow-hidden">
             <img
-              src="/src/assets/RailGo - Your journey, our priority.png"
+              src="/logo/RailGo - Your journey, our priority.png"
               alt="logo"
               className="w-38 h-45 object-contain"
             />
