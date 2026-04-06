@@ -54,19 +54,19 @@ function HowItWorks() {
   const timelineData = [
     { 
       num: "01", 
-      title: "DIGITAL IDENTITY", 
+      title: "SEARCH YOUR ROUTE", 
       desc: "Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before.",
       img: "https://images.unsplash.com/photo-1560607985-ba7df7f6faf6?w=800&auto=format&fit=crop" 
     },
     { 
       num: "02", 
-      title: "LUXURY PLATFORM", 
+      title: "BOOK YOUR SEAT", 
       desc: "Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before.",
       img: "https://plus.unsplash.com/premium_photo-1661962243625-3866ac054019?w=800&auto=format&fit=crop" 
     },
     { 
       num: "03", 
-      title: "VELOCITY ENGAGEMENT", 
+      title: "ENJOY YOUR JOURNEY", 
       desc: "Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before.",
       img: "https://images.unsplash.com/photo-1514970746-d4a465d514d0?w=800&auto=format&fit=crop" 
     }
@@ -97,7 +97,7 @@ function HowItWorks() {
                 <img 
                   src={item.img} 
                   alt={item.title} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-110" 
+                  className="w-[560px] h-[450px] object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-110" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#011124]/80 via-transparent to-transparent"></div>
               </div>
