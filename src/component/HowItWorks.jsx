@@ -76,7 +76,7 @@ function HowItWorks() {
     <section ref={componentRef} className="bg-[#011124] py-32 overflow-hidden relative">
       
       <div className="max-w-7xl mx-auto px-8 mb-40 text-center">
-        <p className="text-[#C00817] font-black tracking-[0.5em] text-xs uppercase mb-4">The Process</p>
+        <p className="text-[#113D72] font-black tracking-[0.5em] text-xs uppercase mb-4">The Process</p>
         <h2 className="text-white text-6xl md:text-8xl font-black italic tracking-tighter leading-[0.9] uppercase">
           HOW WE <span className="text-transparent" style={{ WebkitTextStroke: "1px white" }}>MOVE YOU.</span>
         </h2>
@@ -86,7 +86,7 @@ function HowItWorks() {
         
         {/* CENTER TRACK LINE */}
         <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[1px] h-full bg-white/10 z-0 hidden lg:block"></div>
-        <div className="track-line absolute left-1/2 -translate-x-1/2 top-0 w-[2px] h-full bg-gradient-to-b from-[#C00817] via-blue-500 to-[#C00817] z-10 hidden lg:block shadow-[0_0_20px_#C00817]"></div>
+        <div className="track-line absolute left-1/2 -translate-x-1/2 top-0 w-[2px] h-full bg-gradient-to-b from-[#113D72] via-blue-500 to-[#113D72] z-10 hidden lg:block shadow-[0_0_20px_#113D72]"></div>
 
         <div className="space-y-40">
           {timelineData.map((item, i) => (
@@ -103,14 +103,14 @@ function HowItWorks() {
               </div>
 
               {/* CENTER TRACK NODE */}
-              <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 bg-[#011124] border-4 border-[#C00817] rounded-full z-20 hidden lg:flex items-center justify-center">
+              <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 bg-[#011124] border-4 border-[#113D72] rounded-full z-20 hidden lg:flex items-center justify-center">
                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
               </div>
 
               {/* CONTENT PANEL */}
               <div className={`content-panel ${i % 2 === 0 ? 'lg:order-2 lg:text-left' : 'lg:order-1 lg:text-right'}`}>
                 <div className="space-y-6">
-                   <span className="text-[#C00817] font-black text-7xl italic opacity-10">{item.num}</span>
+                   <span className="text-[#113D72] font-black text-7xl italic opacity-10">{item.num}</span>
                    <h3 className="text-white text-4xl md:text-5xl text-center font-black italic tracking-tighter uppercase leading-none">
                      {item.title}
                    </h3>
@@ -120,7 +120,7 @@ function HowItWorks() {
                    <div className={`flex ${i % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
                     <button className="group flex items-center gap-3 text-white font-bold tracking-widest text-xs uppercase border border-white/10 px-6 py-3 rounded-full hover:bg-white hover:text-black transition-all">
                       Details 
-                      <span className="text-[#C00817] group-hover:translate-x-1 transition-transform">→</span>
+                      <span className="text-[#113D72] group-hover:translate-x-1 transition-transform">→</span>
                     </button>
                    </div>
                 </div>

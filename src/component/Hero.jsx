@@ -36,7 +36,7 @@ function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-6 pt-1">
-            <button className="bg-[#113D72] hover:bg-white hover:text-black text-white px-10  py-4 rounded-full font-black tracking-widest transition-all duration-500 shadow-2xl shadow-red-900/40 transform hover:-translate-y-1">
+            <button className="bg-[#113D72] hover:bg-orange-600 hover:text-white text-white px-10  py-4 rounded-full font-black tracking-widest transition-all duration-500 shadow-2xl shadow-red-900/40 transform hover:-translate-y-1">
               GET STARTED
             </button>
             <button className="group flex items-center gap-4 text-white font-bold tracking-widest text-sm transition-all hover:text-blue-400">

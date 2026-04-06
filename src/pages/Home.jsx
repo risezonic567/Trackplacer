@@ -5,6 +5,8 @@ import WhyChooseUs from '../component/WhyChooseUs'
 import HowItWorks from '../component/HowItWorks'
 import Testimonials from '../component/Testimonials'
 import CTA from '../component/CTA'
+import TrainDestinationsPage from '../component/TrainDesPage'
+import FAQ from '../component/FAQ'
 
 function Home() {
   return (
@@ -13,6 +15,9 @@ function Home() {
         {/* <Features/> */}
         {/* <WhyChooseUs/> */}
         <HowItWorks/>
+        {/* <TrainDestinationsPage/> */}
+        
+        <FAQ/>
         <Testimonials/>
         <CTA/>
     </div>

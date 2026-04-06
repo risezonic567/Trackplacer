@@ -15,7 +15,7 @@ export default function CTA() {
           railway travel across the country.
         </p>
 
-        <button className="bg-[#C00817] hover:bg-red-700 px-10 py-4 rounded-full font-semibold text-lg transition shadow-lg hover:shadow-red-500/30">
+        <button className="bg-[#113D72] hover:bg-red-700 px-10 py-4 rounded-full font-semibold text-lg transition shadow-lg hover:shadow-red-500/30">
           Book Your Ticket
         </button>
 
