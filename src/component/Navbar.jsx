@@ -64,15 +64,13 @@ function Navbar() {
 
           <div className="w-40 h-12 rounded-lg flex items-center justify-center overflow-hidden">
             <img
-              src="/logo/RailGo - Your journey, our priority.png"
+              src="/logo/Track Placer Logo.jpg.jpeg"
               alt="logo"
               className="w-38 h-45 object-contain"
             />
           </div>
 
-          <h1 className="text-white font-bold text-xl tracking-tight">
-            VELOCITY
-          </h1>
+         
 
         </div>
 

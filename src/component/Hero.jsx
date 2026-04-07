@@ -8,7 +8,7 @@ function Hero() {
       {/* Replace the URL with a high-res shot of a modern bullet train or sleek tracks at night */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1532105956626-9569c03602f6?q=80&w=2574&auto=format&fit=crop" 
+          src="/logo/Home page banner.jpg.jpeg" 
           alt="High Speed Rail" 
           className="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-1000 scale-105"
         />
