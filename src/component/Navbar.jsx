@@ -7,8 +7,8 @@ function Navbar() {
   
   const menu = [
     { name: "Home", link: "/" },
-    { name: "Train Status", link: "/status" },
-    { name: "Tickets", link: "/tickets" },
+    { name: "About Us", link: "/about-us" },
+    { name: "Destinations", link: "/destination" },
     { name: "Contact", link: "/contact" },
   ];
 
@@ -117,7 +117,7 @@ function Navbar() {
           ))}
           <li className="pt-4 border-t border-white/5">
              <a href="tel:+18663250204">
-              <button className="w-full bg-blue-600 hover:bg-[#D71926] text-white py-4 rounded-2xl font-black flex items-center justify-center gap-3">
+              <button className="w-full bg-[#2273CB] hover:bg-[#D71926] text-white py-4 rounded-2xl font-black flex items-center justify-center gap-3">
                 <Phone className="w-5 h-5" />
                 +18663250204
              </button>
