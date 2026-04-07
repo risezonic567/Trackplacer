@@ -55,19 +55,19 @@ function HowItWorks() {
     { 
       num: "01", 
       title: "SEARCH YOUR ROUTE", 
-      desc: "Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before.",
+      desc: "Navigate through our extensive high-speed rail network with precision. Select your origin, destination, and preferred departure window using our intuitive AI-driven scheduling engine. Explore real-time availability and dynamic routing options designed to get you to your terminal faster than ever before. Every connection is optimized for seamless transitions across major transit hubs worldwide.",
       img: "https://images.unsplash.com/photo-1560607985-ba7df7f6faf6?w=800&auto=format&fit=crop" 
     },
     { 
       num: "02", 
       title: "BOOK YOUR SEAT", 
-      desc: "Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before.",
+      desc: "Secure your spot in our premium cabins with a single click. Our secure encryption protocols ensure your transaction is private and instantaneous. From ergonomic window views to collaborative workspaces, choose the environment that suits your travel style. Receive your digital biometric ticket instantly on your device, ready for the frictionless boarding experience that defines our modern service.",
       img: "https://plus.unsplash.com/premium_photo-1661962243625-3866ac054019?w=800&auto=format&fit=crop" 
     },
     { 
       num: "03", 
       title: "ENJOY YOUR JOURNEY", 
-      desc: "Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before Our terminal scanners recognize your biometric ID instantly. Enter the station in under 12 seconds. Experience friction-less boarding like never before.",
+      desc: "Step into a world of comfort as you glide across the landscape at record speeds. Our cabins are engineered for absolute silence and stability, allowing you to focus on work or deep relaxation. Enjoy high-speed connectivity, premium refreshments, and panoramic views from your seat. Experience the future of travel where the journey itself is just as rewarding as the destination you are heading towards.",
       img: "https://images.unsplash.com/photo-1514970746-d4a465d514d0?w=800&auto=format&fit=crop" 
     }
   ];
@@ -75,7 +75,7 @@ function HowItWorks() {
   return (
     <section ref={componentRef} className="bg-[#011124] py-32 overflow-hidden relative">
       
-      <div className="max-w-7xl mx-auto px-8 mb-40 text-center">
+      <div className="max-w-7xl mx-auto px-8 mb-24 text-center">
         <p className="text-[#113D72] font-black tracking-[0.5em] text-xs uppercase mb-4">The Process</p>
         <h2 className="text-white text-6xl md:text-8xl font-black italic tracking-tighter leading-[0.9] uppercase">
           HOW WE <span className="text-transparent" style={{ WebkitTextStroke: "1px white" }}>MOVE YOU.</span>
@@ -92,12 +92,12 @@ function HowItWorks() {
           {timelineData.map((item, i) => (
             <div key={i} className={`timeline-block relative grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center ${i % 2 === 0 ? 'even-row' : 'odd-row'}`}>
               
-              {/* IMAGE PANEL - Smaller & Rounded */}
+              {/* IMAGE PANEL */}
               <div className={`image-container relative h-[450px] w-full rounded-[2.5rem] overflow-hidden border border-white/10 group shadow-2xl ${i % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                 <img 
                   src={item.img} 
                   alt={item.title} 
-                  className="w-[560px] h-[450px] object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-110" 
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-110" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#011124]/80 via-transparent to-transparent"></div>
               </div>
@@ -110,17 +110,17 @@ function HowItWorks() {
               {/* CONTENT PANEL */}
               <div className={`content-panel ${i % 2 === 0 ? 'lg:order-2 lg:text-left' : 'lg:order-1 lg:text-right'}`}>
                 <div className="space-y-6">
-                   <span className="text-[#113D72] font-black text-7xl italic opacity-10">{item.num}</span>
-                   <h3 className="text-white text-4xl md:text-5xl text-center font-black italic tracking-tighter uppercase leading-none">
+                   <span className="text-[#113D72] font-black text-7xl italic opacity-20 block">{item.num}</span>
+                   <h3 className="text-white text-4xl md:text-5xl font-black italic tracking-tighter uppercase leading-none">
                      {item.title}
                    </h3>
-                   <p className="text-gray-400 text-lg font-light leading-relaxed max-w-md mx-auto lg:mx-0">
+                   <p className={`text-gray-400 text-lg font-light leading-relaxed max-w-md ${i % 2 === 0 ? 'lg:ml-0 mr-auto' : 'lg:mr-0 ml-auto'} mx-auto`}>
                      {item.desc}
                    </p>
-                   <div className={`flex ${i % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                    <button className="group flex items-center gap-3 text-white font-bold tracking-widest text-xs uppercase border border-white/10 px-6 py-3 rounded-full hover:bg-white hover:text-black transition-all">
+                   <div className={`flex ${i % 2 === 0 ? 'justify-start' : 'justify-end'} justify-center`}>
+                    <button className="bg-[#113D72] group flex items-center gap-3 text-white font-bold tracking-widest text-xs uppercase border border-white/10 px-6 py-3 rounded-full hover:bg-orange-600 cursor-pointer transition-all">
                       Details 
-                      <span className="text-[#113D72] group-hover:translate-x-1 transition-transform">→</span>
+                      <span className="text-white group-hover:translate-x-1 transition-transform">→</span>
                     </button>
                    </div>
                 </div>

@@ -78,15 +78,15 @@ export default function TrainDestinationsPage() {
         className="text-center max-w-4xl mx-auto px-6"
       >
 
-        <div className="flex items-center justify-center gap-2 text-[#C00817] mb-3">
+        <div className="flex items-center justify-center gap-2 text-[#113D72] mb-3">
           <Train size={20} />
           <span className="uppercase tracking-widest text-sm font-bold">
-            TrainTravel Platform
+            TrackPlacer Platform
           </span>
         </div>
 
         <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
-          Book Train Tickets <span className="text-[#C00817]">Across India</span>
+          Book Train Tickets <span className="text-[#113D72]">Across India</span>
         </h2>
 
         <p className="text-gray-300 text-lg leading-relaxed">
@@ -99,7 +99,7 @@ export default function TrainDestinationsPage() {
 
 
       {/* FEATURES */}
-      <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto mt-16 px-6">
+      <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto mt-16 px-6 cursor-pointer">
 
         {features.map((f, i) => (
           <motion.div
@@ -110,10 +110,10 @@ export default function TrainDestinationsPage() {
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
             whileHover={{ y: -8 }}
-            className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center hover:border-[#C00817] transition-all"
+            className="bg-[#C00817]  backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center hover:border-[#C00817] transition-all"
           >
 
-            <div className="flex justify-center mb-4 text-[#C00817]">
+            <div className="flex justify-center mb-4 text-white">
               {f.icon}
             </div>
 
@@ -134,7 +134,7 @@ export default function TrainDestinationsPage() {
       {/* DESTINATION HEADING */}
       <div className="text-center mt-24 mb-14">
 
-        <p className="uppercase tracking-[0.3em] text-sm text-[#C00817] font-bold">
+        <p className="uppercase tracking-[0.3em] text-2xl text-[#113D72] font-bold">
           Popular Routes
         </p>
 
@@ -160,8 +160,8 @@ export default function TrainDestinationsPage() {
 
             <img
               src={item.img}
-              alt={item.name}
-              className="h-[320px] w-full object-cover transform group-hover:scale-110 transition duration-700"
+              
+              className="h-[320px] w-[390px] object-cover transform group-hover:scale-110 transition duration-700"
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
@@ -173,8 +173,8 @@ export default function TrainDestinationsPage() {
               </p>
 
               <h3 className="text-2xl font-bold flex items-center gap-2 mt-1">
-                <MapPin size={18} className="text-[#C00817]" />
-                {item.name}
+                {/* <MapPin size={18} className="text-[#C00817]" /> */}
+                {/* {item.name} */}
               </h3>
 
             </div>
@@ -190,7 +190,7 @@ export default function TrainDestinationsPage() {
 
         <Link
           to="tel:+18663075957"
-          className="bg-[#C00817] hover:bg-red-700 px-10 py-4 rounded-full font-semibold shadow-lg transition hover:scale-105"
+          className="bg-[#113D72] hover:bg-red-700 px-10 py-4 rounded-full font-semibold shadow-lg transition hover:scale-105"
         >
           Enquire About Train Tickets
         </Link>
