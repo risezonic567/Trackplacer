@@ -37,7 +37,7 @@ function Hero() {
 
           <div className="flex flex-wrap gap-6 pt-1">
             <button className="bg-[#113D72] hover:bg-orange-600 hover:text-white text-white px-10  py-4 rounded-full font-black tracking-widest transition-all duration-500 shadow-2xl shadow-red-900/40 transform hover:-translate-y-1">
-              GET STARTED
+              <a href='+18663250204'>CALL NOW</a>
             </button>
             <button className="group flex items-center gap-4 text-white font-bold tracking-widest text-sm transition-all hover:text-blue-400">
               <div className="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center group-hover:border-blue-400 transition-colors">

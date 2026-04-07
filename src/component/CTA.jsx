@@ -16,7 +16,7 @@ export default function CTA() {
         </p>
 
         <button className="bg-[#113D72] hover:bg-red-700 px-10 py-4 rounded-full font-semibold text-lg transition shadow-lg hover:shadow-red-500/30">
-          Book Your Ticket
+          <a href="tel:+18663250204">Book Your Ticket</a>
         </button>
 
       </div>

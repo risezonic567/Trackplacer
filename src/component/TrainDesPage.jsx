@@ -3,7 +3,14 @@ import { Percent, Clock, ShieldCheck, Train, MapPin, Ticket } from "lucide-react
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-export default function TrainDestinationsPage() {
+export default function TrainDesPage() {
+
+  const stats = [
+    { number: "500K+", label: "Tickets Booked" },
+    { number: "120+", label: "Train Routes" },
+    { number: "50+", label: "Cities Covered" },
+    { number: "99%", label: "Customer Satisfaction" }
+  ];
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -35,39 +42,33 @@ export default function TrainDestinationsPage() {
 
   const destinations = [
     {
-      name: "Delhi",
-      img: "/images/delhi.jpg",
-      info: "Capital Rail Hub"
+      name: "Glacier National Park, Montana",
+      img: "/images/Glacier National Park, Montana.jpg.jpeg",
     },
     {
-      name: "Mumbai",
-      img: "/images/mumbai.jpg",
-      info: "Western Railway"
+      name: "Glenwood Springs, Colorado",
+      img: "/images/Glenwood Springs, Colorado.jpg.jpeg",
     },
     {
-      name: "Jaipur",
-      img: "/images/jaipur.jpg",
-      info: "Pink City Express"
+      name: "Harper’s Ferry, West Virginia",
+      img: "/images/Harper’s Ferry, West Virginia.jpg.jpeg",
     },
     {
-      name: "Varanasi",
-      img: "/images/varanasi.jpg",
-      info: "Spiritual Routes"
+      name: "New Orleans, Louisiana",
+      img: "/images/New Orleans, Louisiana.jpg.jpeg",
     },
     {
-      name: "Goa",
-      img: "/images/goa.jpg",
-      info: "Coastal Railway"
+      name: "Santa Barbara, California",
+      img: "/images/Santa Barbara, California.jpg.jpeg",
     },
     {
-      name: "Kolkata",
-      img: "/images/kolkata.jpg",
-      info: "Eastern Railways"
+      name: "New York City, New York",
+      img: "/images/New York City, New York.jpg.jpeg",
     }
   ];
 
   return (
-    <section className="bg-[#011124] text-white py-5 pb-10">
+    <section className="bg-[#011124] text-white py-24">
 
       {/* HEADING */}
       <motion.div
@@ -81,12 +82,12 @@ export default function TrainDestinationsPage() {
         <div className="flex items-center justify-center gap-2 text-[#113D72] mb-3">
           <Train size={20} />
           <span className="uppercase tracking-widest text-sm font-bold">
-            TrainTravel Platform
+            TrackPlacer Platform
           </span>
         </div>
 
         <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
-          Book Train Tickets <span className="text-[#113D72]">Across India</span>
+          Book Train Tickets <span className="text-[#113D72]">Across USA</span>
         </h2>
 
         <p className="text-gray-300 text-lg leading-relaxed">
@@ -99,7 +100,7 @@ export default function TrainDestinationsPage() {
 
 
       {/* FEATURES */}
-      <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto mt-16 px-6">
+      <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto mt-16 px-6 cursor-pointer">
 
         {features.map((f, i) => (
           <motion.div
@@ -110,7 +111,7 @@ export default function TrainDestinationsPage() {
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
             whileHover={{ y: -8 }}
-            className="bg-[#D81622] backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center hover:border-[#113D72] transition-all"
+            className="bg-[#C00817]  backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center hover:border-[#C00817] transition-all"
           >
 
             <div className="flex justify-center mb-4 text-white">
@@ -128,13 +129,37 @@ export default function TrainDestinationsPage() {
           </motion.div>
         ))}
 
+
       </div>
+
+
+      <section className="py-20  text-white">
+
+      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-10 text-center">
+
+        {stats.map((stat, index) => (
+          <div key={index}>
+
+            <h3 className="text-4xl font-bold text-red-500">
+              {stat.number}
+            </h3>
+
+            <p className="text-gray-400 mt-2">
+              {stat.label}
+            </p>
+
+          </div>
+        ))}
+
+      </div>
+
+    </section>
 
 
       {/* DESTINATION HEADING */}
       <div className="text-center mt-24 mb-14">
 
-        <p className="uppercase tracking-[0.3em] text-sm text-[#113D72] font-bold">
+        <p className="uppercase tracking-[0.3em] text-2xl text-[#113D72] font-bold">
           Popular Routes
         </p>
 
@@ -160,21 +185,21 @@ export default function TrainDestinationsPage() {
 
             <img
               src={item.img}
-              alt={item.name}
-              className="h-[320px] w-full object-cover transform group-hover:scale-110 transition duration-700"
+              
+              className="h-full w-full object-cover transform group-hover:scale-110 transition duration-700"
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
             <div className="absolute bottom-6 left-6">
 
-              <p className="text-[#113D72] text-xs tracking-widest uppercase font-bold">
+              <p className="text-[#C00817] text-xs tracking-widest uppercase font-bold">
                 {item.info}
               </p>
 
               <h3 className="text-2xl font-bold flex items-center gap-2 mt-1">
-                <MapPin size={18} className="text-[#113D72]" />
-                {item.name}
+                {/* <MapPin size={18} className="text-[#C00817]" /> */}
+                {/* {item.name} */}
               </h3>
 
             </div>
@@ -189,7 +214,7 @@ export default function TrainDestinationsPage() {
       <div className="text-center mt-20">
 
         <Link
-          to="tel:+18663075957"
+          to="tel:+18663250204"
           className="bg-[#113D72] hover:bg-red-700 px-10 py-4 rounded-full font-semibold shadow-lg transition hover:scale-105"
         >
           Enquire About Train Tickets

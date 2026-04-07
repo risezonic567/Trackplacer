@@ -1,7 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { Phone, Menu, X } from "lucide-react"; // Icons add kiye
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false); // Mobile menu state
+  
   const menu = [
     { name: "Home", link: "/" },
     { name: "Train Status", link: "/status" },
@@ -14,71 +17,47 @@ function Navbar() {
   const buttonRef = useRef(null);
 
   useEffect(() => {
-
-    // Smooth navbar entrance (nothing hidden)
+    // Navbar entrance
     gsap.fromTo(
       navRef.current,
-      { y: -10 },
-      {
-        y: 0,
-        duration: 1,
-        ease: "power2.out"
-      }
+      { y: -20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
     );
 
-    // Menu stagger polish
+    // Menu stagger
     gsap.fromTo(
       menuItems.current,
-      { y: -6 },
-      {
-        y: 0,
-        stagger: 0.08,
-        duration: 0.6,
-        ease: "power2.out"
-      }
+      { y: -10, opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.08, duration: 0.6, ease: "power2.out" }
     );
-
   }, []);
 
   const hoverButton = (e) => {
-    gsap.to(e.currentTarget, {
-      scale: 1.08,
-      duration: 0.2
-    });
+    gsap.to(e.currentTarget, { scale: 1.05, duration: 0.2 });
   };
 
   const leaveButton = (e) => {
-    gsap.to(e.currentTarget, {
-      scale: 1,
-      duration: 0.2
-    });
+    gsap.to(e.currentTarget, { scale: 1, duration: 0.2 });
   };
 
   return (
-    <nav ref={navRef} className="fixed top-0 w-full z-50 px-6 py-4">
-
-      <div className="max-w-7xl mx-auto flex items-center justify-between bg-[#011124] backdrop-blur-lg border border-white/50 px-8 py-3 rounded-2xl shadow-xl">
-
-        {/* Logo */}
-        <div className="flex items-center gap-2">
-
-          <div className="w-40 h-12 rounded-lg flex items-center justify-center overflow-hidden">
+    <nav ref={navRef} className="fixed top-0 w-full z-[100] px-4 md:px-6 py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between bg-[#011124]/90 backdrop-blur-lg border border-white/20 px-6 md:px-8 py-3 rounded-2xl shadow-xl">
+        
+        {/* Logo - Kept untouched as requested */}
+        <div className="flex items-center">
+          <div className="w-32 md:w-40 h-10 md:h-12 flex items-center justify-center overflow-hidden">
             <img
-              src="/logo/Track Placer Logo.jpg.jpeg"
+              src="/logo/Track Placer Logo Png.png"
               alt="logo"
-              className="w-38 h-45 object-contain"
+              className="w-full h-full object-contain"
             />
           </div>
-
-         
-
         </div>
 
-
-        {/* Menu */}
-        <div className="hidden md:block">
-          <ul className="flex gap-8 text-gray-200 font-medium">
-
+        {/* Desktop Menu */}
+        <div className="hidden lg:block">
+          <ul className="flex gap-8 text-gray-200 font-medium text-sm uppercase tracking-wider">
             {menu.map((item, index) => (
               <li
                 key={index}
@@ -87,33 +66,64 @@ function Navbar() {
               >
                 <a
                   href={item.link}
-                  className="hover:text-orange-400 transition-colors duration-300"
+                  className="hover:text-blue-400 transition-colors duration-300"
                 >
                   {item.name}
                 </a>
-
-                {/* animated underline */}
-                <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-
+                <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
               </li>
             ))}
-
           </ul>
         </div>
 
-
-        {/* Button */}
-        <div className="hidden md:block">
+        {/* Desktop Button with Icon */}
+        <div className="hidden md:flex items-center">
           <button
             ref={buttonRef}
             onMouseEnter={hoverButton}
             onMouseLeave={leaveButton}
-            className="bg-[#113D72] cursor-pointer hover:bg-orange-600 text-white px-5 py-2 rounded-full font-semibold transition-all shadow-lg hover:shadow-orange-500/20"
+            className="bg-[#113D72] flex items-center gap-2 text-white px-5 py-2.5 rounded-full font-bold text-sm transition-all shadow-lg hover:shadow-blue-500/20 border border-white/10"
           >
-            Book Now
+            <Phone className="w-4 h-4 text-blue-400" />
+            <a href="tel:+18663250204">+18663250204</a>
           </button>
         </div>
 
+        {/* Mobile Toggle Button */}
+        <div className="lg:hidden flex items-center gap-4">
+           {/* Mobile Phone Icon (Visible on small screens) */}
+           <a href="tel:+18663250204" className="md:hidden bg-blue-600 p-2 rounded-full">
+              <Phone className="w-4 h-4 text-white" />
+           </a>
+           <button onClick={() => setIsOpen(!isOpen)} className="text-white">
+             {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+           </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`lg:hidden absolute top-24 left-6 right-6 bg-[#011124] border border-white/10 rounded-3xl p-8 transition-all duration-500 transform ${isOpen ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0 pointer-events-none'}`}>
+        <ul className="flex flex-col gap-6 text-center">
+          {menu.map((item, index) => (
+            <li key={index}>
+              <a 
+                href={item.link} 
+                className="text-white text-xl font-bold uppercase tracking-tighter"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+          <li className="pt-4 border-t border-white/5">
+             <a href="tel:+18663250204">
+              <button className="w-full bg-blue-600 hover:bg-[#D71926] text-white py-4 rounded-2xl font-black flex items-center justify-center gap-3">
+                <Phone className="w-5 h-5" />
+                +18663250204
+             </button>
+             </a>
+          </li>
+        </ul>
       </div>
     </nav>
   );
