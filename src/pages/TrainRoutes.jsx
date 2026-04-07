@@ -3,123 +3,22 @@ import TestimonialsPage from "../component/Testimonials";
 import { Link } from "react-router-dom";
 
 const trainRoutes = [
-  {
-    id: 1,
-    name: "Acela",
-    from: "Washington, DC",
-    to: "New York, NY",
-    depart: "07:00 AM",
-    arrive: "10:00 AM",
-    duration: "3h",
-    price: 150,
-    category: "High-Speed",
-  },
-  {
-    id: 2,
-    name: "Northeast Regional",
-    from: "New York, NY",
-    to: "Philadelphia, PA",
-    depart: "09:30 AM",
-    arrive: "11:00 AM",
-    duration: "1h 30m",
-    price: 60,
-    category: "Express",
-  },
-  {
-    id: 3,
-    name: "Acela",
-    from: "New York, NY",
-    to: "Boston, MA",
-    depart: "06:30 AM",
-    arrive: "10:15 AM",
-    duration: "3h 45m",
-    price: 130,
-    category: "High-Speed",
-  },
-  {
-    id: 4,
-    name: "Lake Shore Limited",
-    from: "Chicago, IL",
-    to: "New York, NY",
-    depart: "09:30 PM",
-    arrive: "06:30 PM",
-    duration: "21h",
-    price: 180,
-    category: "Long-Distance",
-  },
-  {
-    id: 5,
-    name: "Capitol Limited",
-    from: "Chicago, IL",
-    to: "Washington, DC",
-    depart: "06:40 PM",
-    arrive: "01:05 PM",
-    duration: "18h 25m",
-    price: 140,
-    category: "Long-Distance",
-  },
-  {
-    id: 6,
-    name: "Coast Starlight",
-    from: "Los Angeles, CA",
-    to: "San Francisco, CA",
-    depart: "10:10 AM",
-    arrive: "10:30 PM",
-    duration: "12h 20m",
-    price: 120,
-    category: "Scenic",
-  },
-  {
-    id: 7,
-    name: "Amtrak Cascades",
-    from: "Seattle, WA",
-    to: "Portland, OR",
-    depart: "08:00 AM",
-    arrive: "11:30 AM",
-    duration: "3h 30m",
-    price: 70,
-    category: "Regional",
-  },
-  {
-    id: 8,
-    name: "Brightline",
-    from: "Miami, FL",
-    to: "Orlando, FL",
-    depart: "09:45 AM",
-    arrive: "12:45 PM",
-    duration: "3h",
-    price: 90,
-    category: "High-Speed",
-  },
-  {
-    id: 9,
-    name: "Capitol Corridor",
-    from: "San Francisco, CA",
-    to: "Sacramento, CA",
-    depart: "07:15 AM",
-    arrive: "09:15 AM",
-    duration: "2h",
-    price: 45,
-    category: "Regional",
-  },
-  {
-    id: 10,
-    name: "Empire Service",
-    from: "New York, NY",
-    to: "Albany, NY",
-    depart: "08:20 AM",
-    arrive: "10:50 AM",
-    duration: "2h 30m",
-    price: 50,
-    category: "Regional",
-  },
+  { id: 1, name: "Acela", from: "Washington, DC", to: "New York, NY", depart: "07:00 AM", arrive: "10:00 AM", duration: "3h", price: 150, category: "High-Speed" },
+  { id: 2, name: "Northeast Regional", from: "New York, NY", to: "Philadelphia, PA", depart: "09:30 AM", arrive: "11:00 AM", duration: "1h 30m", price: 60, category: "Express" },
+  { id: 3, name: "Acela", from: "New York, NY", to: "Boston, MA", depart: "06:30 AM", arrive: "10:15 AM", duration: "3h 45m", price: 130, category: "High-Speed" },
+  { id: 4, name: "Lake Shore Limited", from: "Chicago, IL", to: "New York, NY", depart: "09:30 PM", arrive: "06:30 PM", duration: "21h", price: 180, category: "Long-Distance" },
+  { id: 5, name: "Capitol Limited", from: "Chicago, IL", to: "Washington, DC", depart: "06:40 PM", arrive: "01:05 PM", duration: "18h 25m", price: 140, category: "Long-Distance" },
+  { id: 6, name: "Coast Starlight", from: "Los Angeles, CA", to: "San Francisco, CA", depart: "10:10 AM", arrive: "10:30 PM", duration: "12h 20m", price: 120, category: "Scenic" },
+  { id: 7, name: "Amtrak Cascades", from: "Seattle, WA", to: "Portland, OR", depart: "08:00 AM", arrive: "11:30 AM", duration: "3h 30m", price: 70, category: "Regional" },
+  { id: 8, name: "Brightline", from: "Miami, FL", to: "Orlando, FL", depart: "09:45 AM", arrive: "12:45 PM", duration: "3h", price: 90, category: "High-Speed" },
+  { id: 9, name: "Capitol Corridor", from: "San Francisco, CA", to: "Sacramento, CA", depart: "07:15 AM", arrive: "09:15 AM", duration: "2h", price: 45, category: "Regional" },
+  { id: 10, name: "Empire Service", from: "New York, NY", to: "Albany, NY", depart: "08:20 AM", arrive: "10:50 AM", duration: "2h 30m", price: 50, category: "Regional" },
 ];
 
 export default function TrainRoutes() {
-
-    useEffect(() => {
-      window.scroll(0, 0);
-    });
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   const [filter, setFilter] = useState("All");
   const categories = ["All", "Long-Distance", "High-Speed", "Regional"];
@@ -132,21 +31,19 @@ export default function TrainRoutes() {
   return (
     <>
       <div className="min-h-screen bg-[#f8f9fa] font-sans text-slate-900">
-        <header className="bg-[#113D72] text-white py-5 px-6 text-center border-b-2 border-slate-900 shadow-xl">
+        <header className="bg-[#113D72] text-white py-6 px-4 md:px-6 text-center border-b-2 border-slate-900 shadow-xl">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="text-left">
-              <div className="flex items-center">
-                <div className="w-32 md:w-40 h-10 md:h-12 flex items-center justify-center overflow-hidden">
-                 <Link to="/">
-                     <img
+            <div className="text-center md:text-left">
+              <Link to="/" className="inline-block">
+                <div className="w-40 md:w-48 h-12 flex items-center justify-center overflow-hidden">
+                  <img
                     src="/logo/Track Placer Logo Png.png"
                     alt="logo"
                     className="w-full h-full object-contain cursor-pointer"
                   />
-                 </Link>
                 </div>
-              </div>
-              <p className="text-white font-medium">
+              </Link>
+              <p className="text-white/80 font-medium text-sm mt-2">
                 Premium rail journeys across the states
               </p>
             </div>
@@ -156,12 +53,11 @@ export default function TrainRoutes() {
                 <button
                   key={cat}
                   onClick={() => setFilter(cat)}
-                  className={`px-6 py-2 rounded-lg cursor-pointer text-sm font-bold transition-all border-2
-                                    ${
-                                      filter === cat
-                                        ? "bg-[#E01926] text-white border-slate-900 shadow-lg"
-                                        : "bg-[#E01926] text-white border-slate-800/4 hover:bg-[#2273CB] hover:text-white"
-                                    }`}
+                  className={`px-4 md:px-6 py-2 rounded-lg cursor-pointer text-xs md:text-sm font-bold transition-all border-2
+                    ${filter === cat
+                      ? "bg-[#E01926] text-white border-slate-900 shadow-lg"
+                      : "bg-[#E01926]/10 text-white border-white/20 hover:bg-[#2273CB]"
+                    }`}
                 >
                   {cat}
                 </button>
@@ -170,70 +66,68 @@ export default function TrainRoutes() {
           </div>
         </header>
 
-        <main className="max-w-6xl mx-auto py-10 px-4">
-          <div className="space-y-6">
+        <main className="max-w-6xl mx-auto py-8 md:py-12 px-4">
+          <div className="space-y-8 md:space-y-6">
             {filteredRoutes.map((route) => (
               <div
                 key={route.id}
-                className="bg-white rounded-2xl border-2 border-slate-100 shadow-sm hover:border-[#D71926] hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col md:flex-row items-center p-6 gap-6"
+                className="bg-white rounded-2xl border-2 border-slate-100 shadow-sm hover:border-[#D71926] hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col md:flex-row items-center p-6 gap-8 md:gap-6"
               >
+                {/* Departure Info */}
                 <div className="w-full md:w-32 text-center md:text-left">
-                  <div className="text-2xl font-black text-slate-900">
+                  <div className="text-2xl md:text-2xl font-black text-slate-900">
                     {route.depart}
                   </div>
-                  <div className="text-sm text-slate-500 font-bold uppercase tracking-tight">
+                  <div className="text-xs md:text-sm text-slate-500 font-bold uppercase tracking-tight">
                     {route.from}
                   </div>
                 </div>
 
-                <div className="flex-1 flex items-center gap-4 w-full px-4">
-                  <div className="h-3 w-3 rounded-full bg-amber-500 ring-4 ring-amber-100"></div>
-                  <div className="flex-1 h-[3px] bg-slate-100 relative flex justify-center">
-                    <span className="absolute -top-7 text-[12px] text-slate-500 font-black uppercase tracking-widest bg-white px-2">
+                {/* Visual Route Line - FIXED FOR MOBILE */}
+                <div className="flex-1 flex items-center gap-2 md:gap-4 w-full px-2 py-4 md:py-0">
+                  <div className="h-3 w-3 shrink-0 rounded-full bg-amber-500 ring-4 ring-amber-100"></div>
+                  <div className="flex-1 h-[2px] bg-slate-200 relative flex justify-center">
+                    <span className="absolute -top-7 text-[10px] md:text-[12px] text-slate-500 font-black uppercase tracking-widest bg-white px-2 whitespace-nowrap">
                       {route.duration}
                     </span>
-                    <div className="absolute -bottom-10">
-                      <div className="bg-[#2273CB] text-white py-1 px-4 rounded-full flex items-center gap-2 border-2 border-white shadow-sm">
-                        <svg
-                          className="w-4 h-4"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
+                    <div className="absolute -bottom-8 md:-bottom-10">
+                      <div className="bg-[#2273CB] text-white py-1 px-3 md:px-4 rounded-full flex items-center gap-2 border-2 border-white shadow-md">
+                        <svg className="w-3 h-3 md:w-4 md:h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M12 2c-4 0-8 .5-8 4v9.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h12v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-4-4-8-4zM7.5 17c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM18 10H6V6h12v4z" />
                         </svg>
-                        <span className="text-[11px] font-black uppercase whitespace-nowrap">
+                        <span className="text-[9px] md:text-[11px] font-black uppercase whitespace-nowrap">
                           {route.name}
                         </span>
                       </div>
                     </div>
                   </div>
-                  <div className="h-3 w-3 rounded-full bg-slate-300"></div>
+                  <div className="h-3 w-3 shrink-0 rounded-full bg-slate-300"></div>
                 </div>
 
-                <div className="w-full md:w-32 text-center md:text-right">
-                  <div className="text-2xl font-black text-slate-900">
+                {/* Arrival Info */}
+                <div className="w-full md:w-32 text-center md:text-right mt-4 md:mt-0">
+                  <div className="text-2xl md:text-2xl font-black text-slate-900">
                     {route.arrive}
                   </div>
-                  <div className="text-sm text-slate-500 font-bold uppercase tracking-tight">
+                  <div className="text-xs md:text-sm text-slate-500 font-bold uppercase tracking-tight">
                     {route.to}
                   </div>
                 </div>
 
-                <div className="w-full md:w-48 flex flex-row md:flex-col items-center justify-between md:justify-center border-t md:border-t-0 md:border-l-2 border-slate-50 pt-4 md:pt-0 md:pl-8">
-                  <div className="text-3xl font-black text-slate-900 mb-2">
+                {/* Price and Button - FIXED FOR MOBILE */}
+                <div className="w-full md:w-48 flex flex-row md:flex-col items-center justify-between md:justify-center border-t-2 md:border-t-0 md:border-l-2 border-slate-100 pt-6 md:pt-0 md:pl-8 mt-4 md:mt-0">
+                  <div className="text-3xl md:text-3xl font-black text-slate-900">
                     <span className="text-lg text-amber-600 mr-1">$</span>
                     {route.price}
                   </div>
 
-                  <a href="tel:+18663250204">
+                  <a href="tel:+18663250204" className="md:mt-3">
                     <button
-                    onClick={() =>
-                      window.gtag_report_conversion("tel:+18663250204")
-                    }
-                    className="bg-[#2273CB] cursor-pointer hover:bg-[#D71926] hover:text-white text-white px-8 py-3 rounded-xl font-black text-sm uppercase transition-all duration-300 shadow-md transform hover:scale-101"
-                  >
-                    Book Now
-                  </button>
+                      onClick={() => window.gtag_report_conversion && window.gtag_report_conversion("tel:+18663250204")}
+                      className="bg-[#2273CB] cursor-pointer hover:bg-[#D71926] text-white px-6 md:px-6 py-2 rounded-xl font-black text-xs md:text-sm uppercase transition-all duration-300 shadow-lg active:scale-95"
+                    >
+                      Book Now
+                    </button>
                   </a>
                 </div>
               </div>
