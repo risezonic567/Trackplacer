@@ -13,9 +13,9 @@ export default function Footer() {
 
   const footerLinks = [
     { name: "Home", link: "/" },
-    { name: "About Us", link: "/about-us" },
-    { name: "Destinations", link: "/destination" },
-    { name: "Contact", link: "/contact" },
+    { name: "About", link: "#about" },
+    { name: "Destinations", link: "#destinations" },
+    { name: "Contact", link: "#contact" },
     { name: "Train Routes", link: "/train-routes" },
   ];
 
@@ -50,16 +50,16 @@ export default function Footer() {
             <ul className="space-y-4">
               {footerLinks.map((item) => (
                 <li key={item.name}>
-                  <Link to={item.link} className="text-gray-500 hover:text-white hover:translate-x-2 inline-block transition-all text-base font-medium">
+                  <a href={item.link} className="text-gray-500 hover:text-white hover:translate-x-2 inline-block transition-all text-base font-medium">
                     {item.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Column 3: Contact (Takes 4/12 space) */}
-          <div className="lg:col-span-4 space-y-8">
+          <div className="lg:col-span-4  space-y-8">
             <h4 className="text-[11px] font-black uppercase tracking-[0.4em] text-blue-400">Global HQ</h4>
             <div className="space-y-6">
               {/* <div className="flex items-start gap-4 group">
@@ -70,18 +70,17 @@ export default function Footer() {
                   122 Velocity Plaza, Financial District,<br/> New York, NY 10004
                 </span>
               </div> */}
-              
-              <div className="flex items-center gap-4 group">
+              <a href="tel:+18663250204" className="text-gray-400 hover:text-white transition-colors text-sm font-bold">
+              <div className="flex items-center gap-4 group pb-5">
+                
                 <div className="p-3 rounded-xl bg-white/[0.03] border border-white/10 text-blue-500">
                   <Phone className="w-5 h-5" />
                 </div>
-                <a href="tel:+18663250204" className="text-gray-400 hover:text-white transition-colors text-sm font-bold">
                   +1 866-325-0204
+                </div>
                 </a>
-                
-              </div>
               {/* Newsletter Integrated here for better layout */}
-            <div className="relative max-w-sm">
+            <div className="relative max-w-sm ">
                <input 
                   type="email" 
                   placeholder="Join our newsletter" 

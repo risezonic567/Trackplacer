@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Hero from '../component/Hero'
 // import Features from '../component/Features'
 // import WhyChooseUs from '../component/WhyChooseUs'
@@ -11,21 +11,28 @@ import TrainDesPage from '../component/TrainDesPage'
 import Navbar from '../component/Navbar'
 
 function Home() {
+
+  useEffect(() => {
+      window.scroll(0, 0);
+    });
   return (
-    <div>
+    <div className='relative'>
       <Navbar/>
-        <Hero/>
+        {/* <Hero/> */}
         {/* <Features/> */}
-        
-        <HowItWorks/>
+        {/* <HowItWorks/> */}
         {/* <TrainDestinationsPage/> */}
         {/* <WhyChooseUs/>     // good design with mob */}
-        
-        <TrainDesPage/>
-        <Testimonials/>
-        
-        <CTA/>
-        <FAQ/>
+        {/* <TrainDesPage/> */}
+        {/* <Testimonials/> */}
+        {/* <CTA/> */}
+        {/* <FAQ/> */}
+      <section id="home"><Hero/></section>
+      <section id="about"><HowItWorks/></section>
+      <section id="destinations"><TrainDesPage/></section>
+      <section id="testimonials"><Testimonials/></section>
+      <section id="contact"><CTA/></section>
+      <section id="faq"><FAQ/></section>
         
     </div>
   )

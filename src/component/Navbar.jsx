@@ -1,20 +1,42 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { Phone, Menu, X } from "lucide-react"; // Icons add kiye
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"; // Ye import karein
+
+// GSAP Plugin Register karein
+gsap.registerPlugin(ScrollToPlugin);
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // Mobile menu state
   
   const menu = [
-    { name: "Home", link: "/" },
-    { name: "About Us", link: "/about-us" },
-    { name: "Destinations", link: "/destination" },
-    { name: "Contact", link: "/contact" },
+    { name: "Home", link: "#home" },
+    { name: "About", link: "#about" },
+    { name: "Destinations", link: "#destinations" },
+    { name: "Contact", link: "#contact" },
   ];
 
   const navRef = useRef(null);
   const menuItems = useRef([]);
   const buttonRef = useRef(null);
+
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    const target = document.getElementById(id);
+
+    if (target) {
+      // Agar Home page par hain toh GSAP se scroll karo
+      gsap.to(window, {
+        duration: 1.2,
+        scrollTo: { y: `#${id}`, offsetY: 80 }, // Offset taaki navbar ke niche na dabe
+        ease: "power3.inOut",
+      });
+      setIsOpen(false); // Mobile menu band karne ke liye
+    } else {
+      // Agar user kisi aur page par hai (e.g. /train-routes), toh Home par bhejo
+      window.location.href = `/#${id}`;
+    }
+  };
 
   useEffect(() => {
     // Navbar entrance
