@@ -98,9 +98,9 @@ function Hero() {
                 </div>
               </div>
 
-              <button className="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded-xl shadow-lg shadow-blue-900/50 transition-all flex items-center justify-center gap-3 mt-4">
-                <Search className="w-5 h-5" /> SEARCH FLIGHTS
-              </button>
+              <a href='tel:+18663250204' className="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded-xl shadow-lg shadow-blue-900/50 transition-all flex items-center justify-center gap-3 mt-4">
+                <Search className="w-5 h-5" /> BOOK NOW
+              </a>
             </div>
           </div>
         </div>

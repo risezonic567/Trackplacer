@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { Phone, Menu, X } from "lucide-react"; // Icons add kiye
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"; // Ye import karein
+import { Link } from "react-router-dom";
 
 // GSAP Plugin Register karein
 gsap.registerPlugin(ScrollToPlugin);
@@ -10,7 +11,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // Mobile menu state
   
   const menu = [
-    { name: "Home", link: "#home" },
+    { name: "Home", Link: "/" },
     { name: "About", link: "#about" },
     { name: "Destinations", link: "#destinations" },
     { name: "Contact", link: "#contact" },
@@ -68,6 +69,7 @@ function Navbar() {
         
         {/* Logo - Kept untouched as requested */}
         <div className="flex items-center">
+          <Link to='/'>
           <div className="w-32 md:w-40 h-10 md:h-12 flex items-center justify-center overflow-hidden">
             <img
               src="/logo/Track Placer Logo Png.png"
@@ -75,6 +77,7 @@ function Navbar() {
               className="w-full h-full object-contain"
             />
           </div>
+          </Link>
         </div>
 
         {/* Desktop Menu */}

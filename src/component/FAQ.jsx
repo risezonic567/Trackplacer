@@ -20,12 +20,12 @@ function FAQ() {
   const [open, setOpen] = useState(null);
 
   return (
-    <section className="py-14 bg-[#020617] text-white">
+    <section className="py-14  ">
 
       <div className="max-w-3xl mx-auto px-6">
 
         <h2 className="text-4xl font-bold text-center mb-16">
-          Frequently Asked Questions
+          <span className="text-[#257DDC]">Frequently Asked</span> <span className="text-red-500">Questions</span>
         </h2>
 
         {faqs.map((faq, index) => (

@@ -99,18 +99,18 @@ function HowItWorks() {
                   alt={item.title} 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-110" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#011124]/80 via-transparent to-transparent"></div>
+                <div className="absolute inset-0  via-transparent to-transparent"></div>
               </div>
 
               {/* CENTER TRACK NODE */}
-              <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 bg-[#011124] border-4 border-[#113D72] rounded-full z-20 hidden lg:flex items-center justify-center">
+              <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10  border-4 border-[#113D72] rounded-full z-20 hidden lg:flex items-center justify-center">
                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
               </div>
 
               {/* CONTENT PANEL */}
               <div className={`content-panel ${i % 2 === 0 ? 'lg:order-2 lg:text-left' : 'lg:order-1 lg:text-right'}`}>
                 <div className="space-y-6">
-                   <span className="text-[#113D72] font-black text-7xl italic opacity-20 block">{item.num}</span>
+                   <span className="text-[#113D72] font-black text-7xl italic  block">{item.num}</span>
                    <h3 className="text-white text-4xl md:text-5xl font-black italic tracking-tighter uppercase leading-none">
                      {item.title}
                    </h3>

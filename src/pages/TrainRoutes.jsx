@@ -126,7 +126,7 @@ export default function TrainRoutes() {
                       onClick={() => window.gtag_report_conversion && window.gtag_report_conversion("tel:+18663250204")}
                       className="bg-[#2273CB] cursor-pointer hover:bg-[#D71926] text-white px-6 md:px-6 py-2 rounded-xl font-black text-xs md:text-sm uppercase transition-all duration-300 shadow-lg active:scale-95"
                     >
-                      Book Now
+                      Call Now
                     </button>
                   </a>
                 </div>

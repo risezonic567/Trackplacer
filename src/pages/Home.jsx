@@ -9,6 +9,7 @@ import CTA from '../component/CTA'
 import FAQ from '../component/FAQ'
 import TrainDesPage from '../component/TrainDesPage'
 import Navbar from '../component/Navbar'
+import AboutUs from '../component/AboutUs'
 
 function Home() {
 
@@ -28,7 +29,8 @@ function Home() {
         {/* <CTA/> */}
         {/* <FAQ/> */}
       <section id="home"><Hero/></section>
-      <section id="about"><HowItWorks/></section>
+      <section id="about"><AboutUs/></section>
+      <section id="howitworks"><HowItWorks/></section>
       <section id="destinations"><TrainDesPage/></section>
       <section id="testimonials"><Testimonials/></section>
       <section id="contact"><CTA/></section>
