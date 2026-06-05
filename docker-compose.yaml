@@ -9,14 +9,14 @@ services:
    ports: 
      - "3600:80"   #frontend allways depend on backend
 
- backend:
-   build: ./backend
-   container_name: track_placer_backend
-   restart: always
-   ports: 
-     - "5500:5500"  
+#  backend:
+#    build: ./backend
+#    container_name: track_placer_backend
+#    restart: always
+#    ports: 
+#      - "5500:5500"  
 
-  #  env_file:
-  #   - ./backend/.env  
+#   #  env_file:
+#   #   - ./backend/.env  
 
    
