@@ -110,7 +110,7 @@ function Hero() {
       <div className="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2 w-full max-w-5xl px-6 z-20">
         <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-4 rounded-full grid grid-cols-4 gap-4">
           {[
-            { label: "Max Speed", val: "450", unit: "km/h" },
+            { label: "Max Speed", val: "460", unit: "km/h" },
             { label: "Connectivity", val: "Ultra 5G", unit: "" },
             { label: "Safety", val: "Level 5", unit: "" },
             { label: "Comfort", val: "Executive", unit: "" }
