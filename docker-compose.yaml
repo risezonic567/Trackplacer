@@ -4,14 +4,14 @@ services:
 
  frontend:
    build: ./frontend
-   conatiner_name: track_placer_frontend
+   container_name: track_placer_frontend
    restart: always
    ports: 
      - "3600:80"   #frontend allways depend on backend
 
  backend:
    build: ./backend
-   conatiner_name: track_placer_backend
+   container_name: track_placer_backend
    restart: always
    ports: 
      - "5500:5500"  
