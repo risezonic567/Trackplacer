@@ -1,6 +1,6 @@
 FROM node:22.18.0 AS builder 
 
-WORKDIR / app
+WORKDIR /app
 
 COPY package*.json ./
 
