@@ -19,15 +19,7 @@ function Home() {
   return (
     <div className='relative'>
       <Navbar/>
-        {/* <Hero/> */}
-        {/* <Features/> */}
-        {/* <HowItWorks/> */}
-        {/* <TrainDestinationsPage/> */}
-        {/* <WhyChooseUs/>     // good design with mob */}
-        {/* <TrainDesPage/> */}
-        {/* <Testimonials/> */}
-        {/* <CTA/> */}
-        {/* <FAQ/> */}
+      
       <section id="home"><Hero/></section>
       <section id="about"><AboutUs/></section>
       <section id="howitworks"><HowItWorks/></section>
