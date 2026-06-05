@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+
+ frontend:
+   build: ./frontend
+   conatiner_name: track_placer_frontend
+   restart: always
+   ports: 
+     - "3600:80"   #frontend allways depend on backend
+
+ backend:
+   build: ./backend
+   conatiner_name: track_placer_backend
+   restart: always
+   ports: 
+     - "5500:5500"  
+
+   env_file:
+    - ./backend/.env  
+
+   
